@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website B</title>
+</head>
+<body>
+  <div class="signUp-form-container">
+    <form class="signUp-form">
+      <div class="form-control name-group">
+        <label>Enter Your Name:</label>
+        <input type="text" class="name" id="">
+      </div>
+          
+      <div class="form-control surname-group">
+        <label>Enter Your Surname:</label>
+        <input type="text" class="surname" id="">
+      </div>
+    
+      <div class="form-control password-group">
+        <label>Enter Your Password:</label>
+        <input type="password" class="pswd" id="">
+      </div>
+    
+      <div class="form-control submit-group">
+        <button class="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  
+  <p class="display-content">
+    
+  </p>
+  
+  <script>
+    const password = document.querySelector(".pswd");
+    const para = document.querySelector(".display-content")
+    const submit = document.querySelector(".submit");
+    
+    function displayu(event) {
+      event.preventDefault();
+      if (password.value === "1234") {
+        para.textContent = `Authenticated ✅ 
+         Welcome brother`
+      }
+    }
+    
+    submit.addEventListener("click", displayu)
+    
+  </script>
+</body>
+</html>
+
